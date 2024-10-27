@@ -6,10 +6,11 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 let mysql = require('mysql')
 let connection = mysql.createConnection({
-    host: 'localhost',
-    user:'root',
-    password: '120202',
-    database:'qikbyte'
+    host: "recodedb.mysql.database.azure.com",
+    user: "recode",
+    password: "120202Fmc@#@",
+    database: "qikbyte",
+    port: 3306,
 
 })
 
@@ -49,5 +50,5 @@ app.get('/curso/deletar/:id',function(req,res){
         res.redirect('/curso')
     })
 })
-app.listen(3000)
+app.listen(3001)
 console.log("Servidor subiu") 
